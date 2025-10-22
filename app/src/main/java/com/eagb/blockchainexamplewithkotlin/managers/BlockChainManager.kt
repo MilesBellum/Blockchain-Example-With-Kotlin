@@ -14,7 +14,12 @@ class BlockChainManager(
     init {
         // Creating the 'Genesis block' (first block)
         val block =
-            BlockModel(0, System.currentTimeMillis(), null, "Genesis Block")
+            BlockModel(
+                index = 0,
+                timestamp = System.currentTimeMillis(),
+                previousHash = null,
+                data = "Genesis Block"
+            )
         block.mineBlock(difficulty)
         blocks.add(block)
 
@@ -29,17 +34,17 @@ class BlockChainManager(
     /**
      * Broadcast block. Creating a new block.
      *
-     * @param data is the data to broadcast.
+     * @param blockData is the data to broadcast.
      * @return new block.
      */
-    fun newBlock(data: String?): BlockModel {
+    fun newBlock(blockData: String?): BlockModel {
         val latestBlock = latestBlock()
 
         return BlockModel(
-            latestBlock.index + 1,
-            System.currentTimeMillis(),
-            latestBlock.getHash(),
-            data,
+            index = latestBlock.index + 1,
+            timestamp = System.currentTimeMillis(),
+            previousHash = latestBlock.getHash(),
+            data = blockData,
         )
     }
 
