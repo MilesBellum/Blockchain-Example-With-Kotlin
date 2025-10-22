@@ -277,7 +277,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         }
     }
 
-    private suspend fun validateBlockData(blockChainManager: BlockChainManager) {
+    private fun validateBlockData(blockChainManager: BlockChainManager) {
         // Validate block's data
         println(
             resources.getString(

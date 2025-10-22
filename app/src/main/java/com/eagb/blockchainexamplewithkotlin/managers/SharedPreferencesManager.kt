@@ -11,7 +11,10 @@ class SharedPreferencesManager(context: Context) {
         const val DEFAULT_PROOF_OF_WORK = 2
     }
 
-    private val sharedPreference = context.getSharedPreferences(PREFERENCES_DATA, Context.MODE_PRIVATE)
+    private val sharedPreference = context.getSharedPreferences(
+        PREFERENCES_DATA,
+        Context.MODE_PRIVATE
+    )
     private var editor = sharedPreference.edit()
 
     fun setPowValue(powValue: Int) {
@@ -21,7 +24,10 @@ class SharedPreferencesManager(context: Context) {
     }
 
     fun getPowValue(): Int {
-        return sharedPreference.getInt(PROOF_OF_WORK, DEFAULT_PROOF_OF_WORK)
+        return sharedPreference.getInt(
+            PROOF_OF_WORK,
+            DEFAULT_PROOF_OF_WORK
+        )
     }
 
     fun setEncryptionStatus(isActivated: Boolean) {
@@ -31,7 +37,10 @@ class SharedPreferencesManager(context: Context) {
     }
 
     fun getEncryptionStatus(): Boolean {
-        return sharedPreference.getBoolean(ENCRYPTION_STATUS, false)
+        return sharedPreference.getBoolean(
+            ENCRYPTION_STATUS,
+            false
+        )
     }
 
     fun setDarkTheme(isActivated: Boolean) {
@@ -41,6 +50,9 @@ class SharedPreferencesManager(context: Context) {
     }
 
     fun isDarkTheme(): Boolean {
-        return sharedPreference.getBoolean(DARK_THEME, false)
+        return sharedPreference.getBoolean(
+            DARK_THEME,
+            false
+        )
     }
 }

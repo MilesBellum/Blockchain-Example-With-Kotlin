@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.eagb.blockchainexamplewithkotlin.BuildConfig
 import com.eagb.blockchainexamplewithkotlin.R
 import com.eagb.blockchainexamplewithkotlin.databinding.FragmentMoreInfoBinding
+import androidx.core.net.toUri
 
 class MoreInfoFragment : Fragment(R.layout.fragment_more_info) {
     private var _binding: FragmentMoreInfoBinding? = null
@@ -105,7 +106,7 @@ class MoreInfoFragment : Fragment(R.layout.fragment_more_info) {
     }
 
     private fun openUrl(url: String) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        val intent = Intent(Intent.ACTION_VIEW, url.toUri())
         startActivity(intent)
     }
 

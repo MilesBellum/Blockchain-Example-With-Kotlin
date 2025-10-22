@@ -50,7 +50,11 @@ class PowFragment : Fragment(R.layout.fragment_pow) {
      */
     private val clickListener = View.OnClickListener { view ->
         when (view?.id) {
-            R.id.btn_close -> requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            R.id.btn_close -> requireActivity()
+                .supportFragmentManager
+                .beginTransaction()
+                .remove(this)
+                .commit()
             R.id.btn_continue -> setNewPow()
         }
     }
