@@ -6,20 +6,7 @@ Getting started
 ---------------
 You can clone or fork this repo and use it freely. If there are build errors, in Android Studio go to `Tools -> Android -> SDK Manager` and install any available updates. Then go to `Build -> Clean Project` and finally `Build -> Rebuild Project`.
 
-Remember, you will need getting the last API version and updates. This project runs with AndroidX and new Material Design, so, if you want to keep this, leave the dependencies as they are.
-
-#### build.gradle
-```gradle
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.core:core-ktx:1.13.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
-}
-```
+Remember, you will need getting the last API version and updates.
 
 
 Screenshots
@@ -56,5 +43,5 @@ Switch to dark theme when you need it or in Battery saver.
 
 Contact
 ----------
-For anything about the project, you can email me at eagb.mb@gmail.com.
-You can visit my [website](https://eagb-corp.web.app).
+For anything about the project, you can email me at contact@eagbcorp.com.
+You can visit my [website](https://eagbcorp.com).
